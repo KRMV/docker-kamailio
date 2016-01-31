@@ -8,8 +8,8 @@ RUN apt-get upgrade -y
 RUN locale-gen it_IT it_IT.UTF-8
 RUN curl http://deb.kamailio.org/kamailiodebkey.gpg | apt-key add -
 #COPY kamailio.list /etc/apt/sources.list.d/
-RUN echo "deb     http://deb.kamailio.org/kamailio42 wheezy  main" > /etc/apt/sources.list.d/kamailio.list
-RUN echo "deb-src http://deb.kamailio.org/kamailio42 wheezy  main" >> /etc/apt/sources.list.d/kamailio.list
+RUN echo "deb     http://deb.kamailio.org/kamailio43 jessie  main" > /etc/apt/sources.list.d/kamailio.list
+RUN echo "deb-src http://deb.kamailio.org/kamailio43 jessie  main" >> /etc/apt/sources.list.d/kamailio.list
 RUN apt-get update
 RUN apt-get install -y rsyslog
 RUN apt-get install -y procps
